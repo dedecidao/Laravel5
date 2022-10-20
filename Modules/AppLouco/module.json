@@ -1,0 +1,16 @@
+{
+    "name": "AppLouco",
+    "alias": "applouco",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\AppLouco\\Providers\\AppLoucoServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}
