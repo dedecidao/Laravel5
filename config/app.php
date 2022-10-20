@@ -160,7 +160,8 @@ return [
         /*
          * Third Party Service Providers...
          */
-
+            // Nao entendi porque a lib foi add sem o provider=> de acordo com a doc oficial :
+            // https://nwidart.com/laravel-modules/v1/introduction
             Nwidart\Modules\LaravelModulesServiceProvider::class,
 
     ],
