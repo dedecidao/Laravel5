@@ -5,15 +5,29 @@ namespace Modules\AppLouco\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Modules\AppLouco\Services\AproveitamentoServices;
 
 class AppLoucoController extends Controller
 {
+    // Serviço de Aproveitamento de Disciplinas
+    protected $aproveitamentoServices;
+
+    // Injeção de dependência
+    public function __construct(AproveitamentoServices $aproveitamentoServices)
+    {
+        $this->aproveitamentoServices = $aproveitamentoServices;
+    }
+
+
     /**
      * Display a listing of the resource.
      * @return Response
      */
     public function index()
     {
+
+        $solicitacoes = $this->aproveitamentoServices->getSolicitacoes();
+        dd($solicitacoes);
         return view('applouco::index');
     }
 
