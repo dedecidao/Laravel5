@@ -4,6 +4,8 @@ namespace Modules\AppLouco\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\AppLouco\Repositories\AproveitamentoSolicitacaoRepository;
+use Modules\AppLouco\Repositories\Eloquent\AproveitamentoSolicitacaoRepositoryEloquent;
 
 class AppLoucoServiceProvider extends ServiceProvider
 {
@@ -34,7 +36,10 @@ class AppLoucoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            AproveitamentoSolicitacaoRepository::class,
+            AproveitamentoSolicitacaoRepositoryEloquent::class
+        );
     }
 
     /**
