@@ -3,6 +3,7 @@
 namespace Modules\AppLouco\Services;
 
 use Modules\AppLouco\Repositories\AproveitamentoSolicitacaoRepository;
+use Illuminate\Support\Facades\DB;
 
 class AproveitamentoServices
 {

@@ -10,7 +10,7 @@ class AproveitamentoSolicitacao extends Model
     protected $table = 'aproveitamento_solicitacao';
 
     protected $fillable = [
-        'id_req',
+        'id',
         'data_solicitacao',
         'modalidade',
         'matricula',

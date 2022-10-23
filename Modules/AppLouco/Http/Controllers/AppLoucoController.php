@@ -26,8 +26,8 @@ class AppLoucoController extends Controller
     public function index()
     {
 
-        $solicitacoes = $this->aproveitamentoServices->getSolicitacoes();
-        dd($solicitacoes);
+        $solicitacoes = $this->aproveitamentoServices->getSolicitacoes()->all();
+
         return view('applouco::index', compact('solicitacoes'));
     }
 
